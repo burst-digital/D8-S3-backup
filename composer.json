@@ -1,0 +1,14 @@
+{
+  "name": "burst/d8_s3_backup",
+  "type": "",
+  "description": "Creates a backup from a Drupal 8 hosted on platform.sh and syncs this to S3.",
+  "version": "0.0.1",
+  "keywords": [
+    "platform.sh",
+    "platformsh",
+    "drupal 8",
+    "d8",
+    "backup"
+  ],
+  "license": "MIT"
+}
