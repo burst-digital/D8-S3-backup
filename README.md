@@ -9,7 +9,7 @@ __TODO:__
 * Create user
 * Create policy
 * Create bucket
-* Enable object versioning 
+* Enable object versioning
 * Look up AWS credentials
 
 ### Platform.app.yaml
@@ -32,19 +32,19 @@ hooks:
 
 ### ENV vars
 The following ENV vars need to be added to platform.sh:
-* `WEBROOT` - The webroot where drush commands will be executed (usually `/app/web`)
-* `S3_BUCKET` - The S3 bucket name where backups will be stored
-* `AWS_ACCESS_KEY_ID` - The AWS access key ID to authenticate
-* `AWS_SECRET_ACCESS_KEY` - The AWS secret access key to authenticate
-* `S3_BACKUP_FILESYSTEM_ENABLED` - 1 (on) or 0 (off)
-* `S3_BACKUP_DATABASE_ENABLED` - 1 (on) or 0 (off)
+* `env:WEBROOT` - The webroot where drush commands will be executed (usually `/app/web`)
+* `env:S3_BUCKET` - The S3 bucket name where backups will be stored
+* `env:AWS_ACCESS_KEY_ID` - The AWS access key ID to authenticate
+* `env:AWS_SECRET_ACCESS_KEY` - The AWS secret access key to authenticate
+* `env:S3_BACKUP_FILESYSTEM_ENABLED` - 1 (on) or 0 (off)
+* `env:S3_BACKUP_DATABASE_ENABLED` - 1 (on) or 0 (off)
 
 ## Usage
 
 ### Backup
 Backups are automatically made every night.
 Database backups are stored by datetime in the filename.
-File backups are managed by AWS S3 bucket versioning.  
+File backups are managed by AWS S3 bucket versioning.
 
 #### TODO: ~~Manual backup~~
 * Manually backup the filesystem: `command`.
