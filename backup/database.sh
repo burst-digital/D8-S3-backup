@@ -16,7 +16,7 @@ if [ "$S3_BACKUP_DATABASE_ENABLED" = "1" ] ; then
 
   # If not multisite
   if [ ${#sites[@]} -eq 0 ] ; then
-    sites=(${WEBROOT})
+    sites=("default")
   fi
 
   # Multisite

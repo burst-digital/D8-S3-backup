@@ -16,7 +16,7 @@ sites=($(drush sa | grep -v -E '@|default|sites|none|self|root|uri'))
 
 # If not multisite
 if [ ${#sites[@]} -eq 0 ] ; then
-  sites=(${WEBROOT})
+  sites=("default")
 fi
 
 # Multisite
