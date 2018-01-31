@@ -12,6 +12,37 @@ __TODO:__
 * Enable object versioning
 * Look up AWS credentials
 
+### Setup
+1. Create a bucket on [aws](https://s3.console.aws.amazon.com/s3/home?region=us-east-1#).
+2. Bucket name: name of the platform
+2. Region: EU (London)
+2. Click on 'Next'
+2. Enable versioning property --> click on versioning --> enable versioning
+2. Click on 'Next'
+2. Click on 'Next'
+2. Click on 'Create bucket'
+1. You have created a bucket, now create a user for this bucket on [IAM](https://console.aws.amazon.com/iam/home?region=us-east-1#/users).
+1. Click on 'add user'
+3. User name: The name of the bucket + -drupal
+3. Enable the checkbox 'Programmatic access'
+3. Click on 'Next: Permissions'
+3. Click on the block 'Attach existing policies directly'
+3. Click on 'Create policy'
+4. You are now createing a policy
+4. Click on 'Choose a service' --> Searh for S3 --> click on S3
+4. Click on 'Select actions' --> enable the checkbox 'All S3 actions'
+4. Click on 'Resources' --> Click on 'add ARN' under the bucket tab --> add the name for the bucket in 'Bucket name' --> Click on 'Save changes' --> Enable the checkbox 'Any' under the object tab.
+4. You are done with the policy --> Click on 'Review policy'
+4. Name: the name of the bucket, leave description empty
+4. Click on 'Create policy'
+4. You have created a policy, you can close this internet tab.
+3. Click on 'Refresh'
+3. Search for the name of the policy (Bucket name)
+3. Enable the checkbox left of the policy you want to add
+3. Click on 'Next: Review'
+3. Click on 'Create user'
+3. Congratulations, you have created a User. Copy the access key and the secret access key, you need these key to set the environment variables.
+
 ### Platform.app.yaml
 You need to add some configuration in `<project_root>/platform.app.yml` to install and periodically run the scripts.
 
